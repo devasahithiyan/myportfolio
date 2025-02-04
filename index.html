@@ -5,14 +5,17 @@
   <!-- Responsive meta tag -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deva Sahithiyan - Retro 80s Portfolio</title>
-  <!-- Google Font for an 80s arcade feel -->
+  <!-- Google Font for that 80s arcade feel -->
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-    /* Overall styling: layered background for extra depth */
+    /* -------------------------------------------------
+       Overall Body & Background: 
+       - Layered radial gradient with a textured overlay.
+       - Retro neon color palette.
+    ------------------------------------------------- */
     body {
-      /* Layer 1: A vibrant radial gradient for an 80s neon glow */
-      /* Layer 2: A subtle textured overlay */
-      background: radial-gradient(circle at top left, #ff0080, #000), url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      background: radial-gradient(circle at top left, rgba(255,0,128,0.8), rgba(0,0,0,0.9)),
+                  url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
       background-blend-mode: screen, overlay;
       background-size: cover, auto;
       color: #00ffea; /* neon cyan */
@@ -21,32 +24,46 @@
       padding: 0;
       font-size: 14px;
     }
-    /* Header styling with neon gradients and text-shadow */
+
+    /* -------------------------------------------------
+       Header: 
+       - Neon gradient background.
+       - Text-shadow, blinking text.
+       - Flex container for title and animated GIF.
+       - Scrolling marquee below.
+    ------------------------------------------------- */
     header {
       background: linear-gradient(90deg, #ff0080, #ff8c00);
-      padding: 15px 15px 5px 15px;
-      border-bottom: 3px solid #00ffea;
+      padding: 20px 15px 5px 15px;
+      border-bottom: 4px double #00ffea;
+      position: relative;
     }
-    /* Header top container to align title and GIF */
     .header-top {
       display: flex;
       align-items: center;
       justify-content: center;
+      /* Using a deprecated <center> effect (simulated) */
+      text-align: center;
     }
     .header-top h1 {
       margin: 0;
       font-size: 2em;
       color: #ffff00;
-      text-shadow: 2px 2px 0 #000;
+      text-shadow: 3px 3px 0 #000;
       flex: 1;
-      text-align: center;
+    }
+    /* Blinking effect using CSS animation */
+    .blink {
+      animation: blinker 1s linear infinite;
+    }
+    @keyframes blinker {
+      50% { opacity: 0; }
     }
     .header-top img {
-      width: 50px;
+      width: 60px;
       height: auto;
       margin-left: 15px;
     }
-    /* Marquee styling */
     marquee {
       font-size: 0.9em;
       color: #000;
@@ -56,7 +73,12 @@
       border-top: 1px solid #00ffea;
       border-bottom: 1px solid #00ffea;
     }
-    /* Navigation Menu styled as a flex container for responsiveness */
+
+    /* -------------------------------------------------
+       Navigation Menu:
+       - Flex container.
+       - Bold neon colors.
+    ------------------------------------------------- */
     nav {
       background-color: #ffff00;
       padding: 10px;
@@ -73,19 +95,30 @@
     }
     nav a:hover {
       color: #ff0000;
+      text-decoration: underline;
     }
-    /* Main container with a retro dashed border */
+
+    /* -------------------------------------------------
+       Main Container:
+       - Semi-opaque dark background with retro dashed borders and drop shadow.
+       - Emulates table-based spacing.
+    ------------------------------------------------- */
     .container {
       width: 90%;
       max-width: 1000px;
       margin: 20px auto;
-      background-color: #111;
+      background-color: rgba(17, 17, 17, 0.95); /* nearly opaque for readability */
       border: 3px dashed #00ffea;
       padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     }
-    /* Section titles with neon colors and retro borders */
+
+    /* -------------------------------------------------
+       Section Titles:
+       - Neon background and retro borders.
+    ------------------------------------------------- */
     .section-title {
-      background-color: #ff0080;
+      background-color: rgba(255, 0, 128, 0.9);
       color: #ffff00;
       padding: 8px;
       margin-bottom: 10px;
@@ -93,33 +126,49 @@
       text-align: center;
       border: 1px solid #00ffea;
     }
-    /* Table styling reminiscent of old layouts */
+
+    /* -------------------------------------------------
+       Table Layout:
+       - Classic table-based layout.
+       - Semi-opaque cell backgrounds.
+    ------------------------------------------------- */
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
     }
     th, td {
       border: 1px solid #00ffea;
       padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
     }
-    /* Blinking text effect */
-    .blink {
-      animation: blinker 1s linear infinite;
-    }
-    @keyframes blinker {
-      50% { opacity: 0; }
-    }
-    /* Footer styling */
+
+    /* -------------------------------------------------
+       Footer:
+       - Retro neon gradient with blinking text.
+    ------------------------------------------------- */
     footer {
       background: linear-gradient(90deg, #ff0080, #ff8c00);
       color: #ffff00;
       text-align: center;
       padding: 10px;
-      border-top: 3px solid #00ffea;
+      border-top: 4px double #00ffea;
       margin-top: 20px;
     }
-    /* Responsive adjustments */
+
+    /* -------------------------------------------------
+       Background Music:
+       - Hidden audio controls; auto-play (modern browsers may require user interaction)
+    ------------------------------------------------- */
+    audio {
+      display: none;
+    }
+
+    /* -------------------------------------------------
+       Responsive Adjustments:
+       - Ensure mobile devices display the retro design properly.
+    ------------------------------------------------- */
     @media (max-width: 600px) {
       .header-top h1 {
         font-size: 1.5em;
@@ -139,32 +188,36 @@
 </head>
 <body>
 
-  <!-- Header with a flex container for the title and GIF -->
+  <!-- Background Music: Auto-plays a retro-inspired tune -->
+  <audio src="https://www.myinstants.com/media/sounds/80s-electro.mp3" autoplay loop></audio>
+
+  <!-- Header with flex container for title and GIF decoration -->
   <header>
     <div class="header-top">
-      <h1 class="blink">Welcome to Deva Sahithiyan's Portfolio</h1>
+      <!-- Using a simulated <blink> effect for retro authenticity -->
+      <h1 class="blink"><font>Welcome to My Retro Portfolio</font></h1>
       <img src="https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif" alt="Retro Animation">
     </div>
     <marquee behavior="scroll" direction="left" scrollamount="5">
-      Explore my projects, education, experience, and skills!
+      Explore my projects, skills, and more!
     </marquee>
   </header>
 
-  <!-- Navigation Menu -->
+  <!-- Navigation Menu (using some deprecated layout hints like <center> if desired) -->
   <nav>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#achievements">Achievements</a>
+    <a href="#education"><font>Education</font></a>
+    <a href="#projects"><font>Projects</font></a>
+    <a href="#experience"><font>Experience</font></a>
+    <a href="#skills"><font>Skills</font></a>
+    <a href="#achievements"><font>Achievements</font></a>
   </nav>
 
   <!-- Main Content Container -->
   <div class="container">
-    <!-- Personal Info -->
+    <!-- Personal Information Section -->
     <table>
       <tr>
-        <th colspan="2" class="section-title">Personal Information</th>
+        <th colspan="2" class="section-title"><center>Personal Information</center></th>
       </tr>
       <tr>
         <td>Name</td>
@@ -195,7 +248,7 @@
     <!-- Education Section -->
     <table id="education">
       <tr>
-        <th colspan="2" class="section-title">Education</th>
+        <th colspan="2" class="section-title"><center>Education</center></th>
       </tr>
       <tr>
         <td>Degree</td>
@@ -214,14 +267,14 @@
     <!-- Personal Projects Section -->
     <table id="projects">
       <tr>
-        <th colspan="2" class="section-title">Personal Projects (2020 - Present)</th>
+        <th colspan="2" class="section-title"><center>Personal Projects (2020 - Present)</center></th>
       </tr>
       <tr>
         <td><strong>Resume Builder Application</strong></td>
         <td>
           <ul>
             <li>Website enabling students to create professional resumes.</li>
-            <li>Features auto-fill using AI.</li>
+            <li>Features auto‑fill using AI.</li>
             <li>Technologies: JavaScript, jQuery, Bootstrap.</li>
           </ul>
         </td>
@@ -230,7 +283,7 @@
         <td><strong>Blockchain-Based Voting System</strong></td>
         <td>
           <ul>
-            <li>Decentralized voting ensuring tamper-proof records.</li>
+            <li>Decentralized voting ensuring tamper‑proof records.</li>
             <li>Worked with Solidity for smart contracts.</li>
             <li>Technologies: ReactJS, Firebase, Bootstrap, HTML, JavaScript.</li>
           </ul>
@@ -251,7 +304,7 @@
     <!-- Experience Section -->
     <table id="experience">
       <tr>
-        <th colspan="2" class="section-title">Experience</th>
+        <th colspan="2" class="section-title"><center>Experience</center></th>
       </tr>
       <tr>
         <td>
@@ -263,7 +316,7 @@
           <ul>
             <li>Worked on SAP ABAP for an international client.</li>
             <li>Developed and optimized ABAP programs.</li>
-            <li>Collaborated with cross-functional teams.</li>
+            <li>Collaborated with cross‑functional teams.</li>
           </ul>
         </td>
       </tr>
@@ -286,7 +339,7 @@
     <!-- Technical Skills and Interests Section -->
     <table id="skills">
       <tr>
-        <th colspan="2" class="section-title">Technical Skills and Interests</th>
+        <th colspan="2" class="section-title"><center>Technical Skills and Interests</center></th>
       </tr>
       <tr>
         <td>Languages</td>
@@ -314,22 +367,22 @@
       </tr>
       <tr>
         <td>Soft Skills</td>
-        <td>Problem Solving, Self-learning, Presentation, Adaptability</td>
+        <td>Problem Solving, Self‑learning, Presentation, Adaptability</td>
       </tr>
     </table>
 
     <!-- Achievements Section -->
     <table id="achievements">
       <tr>
-        <th colspan="2" class="section-title">Achievements</th>
+        <th colspan="2" class="section-title"><center>Achievements</center></th>
       </tr>
       <tr>
-        <td>Winner of College-Level Codeathons</td>
-        <td>Secured top positions in multiple codeathons (2021 - 2023), demonstrating strong problem-solving skills.</td>
+        <td>Winner of College‑Level Codeathons</td>
+        <td>Secured top positions in multiple codeathons (2021 - 2023), demonstrating strong problem‑solving skills.</td>
       </tr>
       <tr>
         <td>100 Days of LeetCode Badge</td>
-        <td>Earned a badge for 100 days of consistent problem-solving on LeetCode.</td>
+        <td>Earned a badge for 100 days of consistent problem‑solving on LeetCode.</td>
       </tr>
     </table>
   </div>
