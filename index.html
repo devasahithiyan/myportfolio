@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deva Sahithiyan - Retro 90s Portfolio</title>
+  <style>
+    /* Retro background pattern from Transparent Textures */
+    body {
+      background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png') repeat;
+      font-family: "Courier New", Courier, monospace;
+      margin: 0;
+      padding: 0;
+      color: #000080;
+    }
+    /* Header styling with bright neon colors and text shadow */
+    .header {
+      background-color: #ff00ff;
+      text-align: center;
+      padding: 15px;
+      border-bottom: 3px dotted #000080;
+    }
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+      text-shadow: 2px 2px #ffff00;
+    }
+    /* Marquee styling for that extra 90s feel */
+    .marquee {
+      background-color: #ffff00;
+      padding: 5px;
+      font-size: 20px;
+      color: #000080;
+      margin-top: 5px;
+    }
+    /* Container with a table-based layout style */
+    .container {
+      width: 90%;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border: 2px solid #000080;
+      padding: 10px;
+    }
+    /* Left-side navigation panel */
+    .nav {
+      width: 20%;
+      background-color: #00ff00;
+      float: left;
+      padding: 10px;
+      border-right: 2px dashed #000080;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #000080;
+      display: block;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+    /* Main content area */
+    .main {
+      width: 75%;
+      float: right;
+      padding: 10px;
+    }
+    /* Clear floats */
+    .clear {
+      clear: both;
+    }
+    /* Table styling reminiscent of 90s websites */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th {
+      background-color: #ff00ff;
+      color: #ffff00;
+      padding: 8px;
+      border: 1px dashed #000080;
+      text-align: left;
+    }
+    td {
+      padding: 8px;
+      border: 1px solid #000080;
+    }
+    /* Blinking text effect (simulate the old <blink> tag) */
+    .blink {
+      animation: blink-animation 1s steps(5, start) infinite;
+      -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+    @-webkit-keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+    /* Footer styling */
+    footer {
+      background-color: #ff00ff;
+      color: #ffff00;
+      text-align: center;
+      padding: 10px;
+      border-top: 3px dotted #000080;
+      margin-top: 20px;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with a neon title and marquee text -->
+  <div class="header">
+    <h1>Welcome to Deva Sahithiyan's Portfolio</h1>
+    <marquee class="marquee" behavior="scroll" direction="left" scrollamount="5">
+      Check out my projects, education, experience, and more!
+    </marquee>
+  </div>
+
+  <!-- Main container with navigation and content -->
+  <div class="container">
+    <!-- Left Navigation Panel -->
+    <div class="nav">
+      <a href="#personal">Personal Info</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main">
+      <!-- Personal Information -->
+      <h2 id="personal" style="color:#ff00ff;">Personal Information</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>Deva Sahithiyan A S</td>
+        </tr>
+        <tr>
+          <th>Phone</th>
+          <td>+91-9994810395</td>
+        </tr>
+        <tr>
+          <th>Roll No.</th>
+          <td>20EPCI011</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>devasahithiyan@gmail.com</td>
+        </tr>
+        <tr>
+          <th>GitHub</th>
+          <td><a href="https://github.com/devasahithiyan" target="_blank" style="color:#000080;">github.com/devasahithiyan</a></td>
+        </tr>
+        <tr>
+          <th>LinkedIn</th>
+          <td><a href="https://www.linkedin.com/in/deva-sahithiyan-3891ab1ab/" target="_blank" style="color:#000080;">linkedin.com/in/deva-sahithiyan-3891ab1ab</a></td>
+        </tr>
+      </table>
+
+      <!-- Education -->
+      <h2 id="education" style="color:#ff00ff;">Education</h2>
+      <table>
+        <tr>
+          <th>Degree</th>
+          <td>Master of Technology in Computer Science and Engineering (5 years integrated)</td>
+        </tr>
+        <tr>
+          <th>Institution</th>
+          <td>Sri Krishna College of Engineering and Technology, Coimbatore</td>
+        </tr>
+        <tr>
+          <th>CGPA</th>
+          <td>7.9</td>
+        </tr>
+      </table>
+
+      <!-- Personal Projects -->
+      <h2 id="projects" style="color:#ff00ff;">Personal Projects (2020 - Present)</h2>
+      <table>
+        <tr>
+          <th>Resume Builder Application</th>
+          <td>
+            <ul>
+              <li>Website enabling students to create professional resumes with AI auto-fill.</li>
+              <li>Technologies: JavaScript, jQuery, Bootstrap.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Blockchain-Based Voting System</th>
+          <td>
+            <ul>
+              <li>Decentralized voting system ensuring tamper-proof vote records.</li>
+              <li>Technologies: ReactJS, Firebase, Bootstrap, HTML, JavaScript.</li>
+              <li>Worked with Solidity for smart contracts.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Hand Cricket Game</th>
+          <td>
+            <ul>
+              <li>Digital version of the traditional hand cricket game.</li>
+              <li>Technologies: Java AWT.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Experience -->
+      <h2 id="experience" style="color:#ff00ff;">Experience</h2>
+      <table>
+        <tr>
+          <th>Summer Intern - ASE (May - July 2024)</th>
+          <td>
+            <ul>
+              <li>Accenture, Bangalore, India.</li>
+              <li>Worked on SAP ABAP for an international client.</li>
+              <li>Collaborated with cross-functional teams to optimize ABAP programs.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Summer Intern - Full Stack Developer (March - May 2023)</th>
+          <td>
+            <ul>
+              <li>Ether Infotech, Coimbatore, India.</li>
+              <li>Developed Spring Boot and JSP applications.</li>
+              <li>Handled both frontend and backend development tasks.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Technical Skills and Interests -->
+      <h2 id="skills" style="color:#ff00ff;">Technical Skills and Interests</h2>
+      <table>
+        <tr>
+          <th>Languages</th>
+          <td>Java, JavaScript, HTML + CSS</td>
+        </tr>
+        <tr>
+          <th>Libraries</th>
+          <td>jQuery, Spring Boot, Bootstrap</td>
+        </tr>
+        <tr>
+          <th>Web Dev Tools</th>
+          <td>Node.js, VSCode, Git, GitHub</td>
+        </tr>
+        <tr>
+          <th>Cloud/Databases</th>
+          <td>MongoDB, MySQL (Relational Database)</td>
+        </tr>
+        <tr>
+          <th>Relevant Coursework</th>
+          <td>Data Structures & Algorithms, Operating Systems, OOP, DBMS, Software Engineering</td>
+        </tr>
+        <tr>
+          <th>Areas of Interest</th>
+          <td>Web Design & Development, Blockchain</td>
+        </tr>
+        <tr>
+          <th>Soft Skills</th>
+          <td>Problem Solving, Self-learning, Presentation, Adaptability</td>
+        </tr>
+      </table>
+
+      <!-- Achievements -->
+      <h2 id="achievements" style="color:#ff00ff;">Achievements</h2>
+      <table>
+        <tr>
+          <th>Winner - College-Level Codeathons (2021 - 2023)</th>
+          <td>Secured top positions in multiple codeathons, demonstrating strong coding and problem-solving skills.</td>
+        </tr>
+        <tr>
+          <th>100 Days of LeetCode Badge</th>
+          <td>Earned a badge for consistent 100-day problem-solving streak on LeetCode.</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Clear float -->
+    <div class="clear"></div>
+  </div>
+
+  <!-- Footer with blinking text for extra retro fun -->
+  <footer>
+    <p class="blink">Thanks for stopping by my retro 90s portfolio! &copy; 2025 Deva Sahithiyan</p>
+  </footer>
+
+</body>
+</html>
